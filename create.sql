@@ -1,14 +1,4 @@
 
-
-\c tumpa;
-psql -U postgres -d tumpa;
-
-
-
-
-
-
-
 CREATE DATABASE alikaka;
 CREATE TABLE users(
 emp_id SERIAL PRIMARY KEY,
