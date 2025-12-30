@@ -1,0 +1,47 @@
+
+
+\c tumpa;
+psql -U postgres -d tumpa;
+
+
+
+
+
+
+
+CREATE DATABASE alikaka;
+CREATE TABLE users(
+emp_id SERIAL PRIMARY KEY,
+fname VARCHAR(100) NOT NULL,
+lname VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL UNIQUE,
+address TEXT,
+dept VARCHAR(50),
+salary DECIMAL(10, 2) DEFAULT 20000.00,
+hire_date DATE NOT NULL DEFAULT CURRENT_DATE
+
+);
+
+SELECT * FROM users;
+DROP DATABASE alikaka;
+
+CREATE DATABASE tumpa;
+
+CREATE TABLE mnew(
+emp_id SERIAL PRIMARY KEY,
+fname VARCHAR(100) NOT NULL,
+lname VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL UNIQUE,
+address TEXT,
+dept VARCHAR(50),
+salary DECIMAL(10, 2) DEFAULT 20000.00,
+hire_date DATE NOT NULL DEFAULT CURRENT_DATE
+
+);
+
+SELECT current_database();
+
+SELECT datname FROM pg_database;
+
+
+
