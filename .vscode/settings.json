@@ -1,0 +1,26 @@
+{
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "password": "1234",
+      "username": "postgres",
+      "database": "tumpa",
+      "name": "tumpa"
+    },
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "bankdb",
+      "database": "bankdb",
+      "username": "postgres",
+      "password": "1234"
+    }
+  ]
+}
