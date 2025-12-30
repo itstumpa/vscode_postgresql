@@ -60,6 +60,23 @@ SELECT * FROM hello
 UPDATE hello SET salary = 90000.00 WHERE emp_id = 3;
 UPDATE hello SET dept = 'HR' WHERE emp_id = 4;
 -- To delete data
+
+-- ALTER rename COLUMN name
+ALTER TABLE hello 
+RENAME COLUMN salary TO salaries;
+
+-- add new COLUMN
+ALTER TABLE hello
+ADD COLUMN phone VARCHAR(15);
+
+SELECT * FROM hello;
+
+
+
+
+
+
+
 DELETE FROM hello WHERE emp_id = 3;
 DELETE FROM hello WHERE lname = 'Sharma' AND dept='IT';
 -- To drop table
