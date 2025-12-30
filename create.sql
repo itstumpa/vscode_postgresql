@@ -64,3 +64,48 @@ DELETE FROM hello WHERE emp_id = 3;
 DELETE FROM hello WHERE lname = 'Sharma' AND dept='IT';
 -- To drop table
 DROP TABLE das;
+
+
+CREATE TABLE users(
+order_id SERIAL PRIMARY KEY,
+order_date DATE NOT NULL DEFAULT CURRENT_DATE,
+customer_name VARCHAR(100) NOT NULL,
+product_name VARCHAR(100) NOT NULL,
+quantity INT NOT NULL,
+email VARCHAR(100) NOT NULL,
+phone VARCHAR(15) NOT NULL,
+price DECIMAL(10, 2) NOT NULL
+);   
+
+INSERT INTO users(order_id, order_date, customer_name, product_name, quantity, email, phone, price)
+VALUES
+(1, '2023-01-15', 'Alice', 'Laptop', 1, 'tt@gmailcom', 0123457638,   1200.00),
+(2, '2023-02-20', 'Bob', 'Smartphone', 2, 'bob@gmail.com', 0123456789, 800.00),
+(3, '2023-03-10', 'Charlie', 'Tablet', 1, 'charlie@gmail.com', 0123456789, 500.00),
+(4, '2023-04-05', 'David', 'Headphones', 3, 'david@gmail.com', 0123456789, 150.00),
+(5, '2023-05-12', 'Eve', 'Smartwatch', 1, 'eve@gmail.com', 0123456789, 300.00);
+
+SELECT * FROM users;
+
+CREATE TABLE orders(
+order_id SERIAL PRIMARY KEY,
+order_date DATE NOT NULL DEFAULT CURRENT_DATE,
+customer_name VARCHAR(100) NOT NULL,
+product_name VARCHAR(100) NOT NULL,
+quantity INT NOT NULL,
+price DECIMAL(10, 2) NOT NULL
+);   
+ 
+INSERT INTO orders(order_id, order_date, customer_name, product_name, quantity, price)
+VALUES
+(1, '2023-01-15', 'Alice', 'Laptop', 1, 1200.00),
+(2, '2023-02-20', 'Bob', 'Smartphone', 2, 800.00),
+(3, '2023-03-10', 'Charlie', 'Tablet', 1, 500.00),
+(4, '2023-04-05', 'David', 'Headphones', 3, 150.00),
+(5, '2023-05-12', 'Eve', 'Smartwatch', 1, 300.00);
+
+
+
+
+
+SELECT * FROM orders;
