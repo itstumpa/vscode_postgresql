@@ -31,3 +31,15 @@ JOIN orders b ON a.customer_name = b.customer_name AND a.order_id <> b.order_id;
 SELECT o.order_id, u.email
 FROM orders o
 CROSS JOIN users u;
+
+
+-- Those o, u, a, b are table aliases.
+-- orders o
+-- users u
+-- customers c
+-- products p
+
+-- a → first copy of orders
+-- b → second copy of orders
+
+-- o, u, a, b are table aliases, created inside the query to reference tables easily—nothing more.
